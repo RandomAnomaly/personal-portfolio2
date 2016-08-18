@@ -5,4 +5,20 @@
  */
 
 
-document.onLoad = $('#amigaDiv').load('amiga.html');
+//document.onLoad = function(){console.log("hello!")}();
+
+
+var amigaRender = {
+    drawAmiga: function(){
+        console.log('here');
+        var shapes = $("path");
+        
+        var tl = new TimelineMax();
+        
+        tl.to(shapes,1, {drawSVG:"0%"});
+        
+    }
+};
+
+
+document.onLoad = amigaRender.drawAmiga();
